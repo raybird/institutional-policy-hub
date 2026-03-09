@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-size="medium">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Institutional & Policy Hub - TeleNexus</title>
+    <style>
+        :root {
+            --primary: #a2a2a2; /* 制度站專屬：肅穆灰 */
+            --bg: #050505;
+            --card-bg: #111111;
+            --text: #d0d0d0;
+            --accent: #ffffff;
+            --alert: #ff9500;
+        }
+        html[data-size="small"] { font-size: 14px; }
+        html[data-size="medium"] { font-size: 16px; }
+        html[data-size="large"] { font-size: 18px; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Times New Roman', serif;
+            margin: 0; padding: 1.5rem; line-height: 1.6; transition: font-size 0.2s ease;
+        }
+        .container { max-width: 700px; margin: 0 auto; }
+        header { 
+            border-bottom: 3px double var(--primary); padding-bottom: 1rem; margin-bottom: 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        h1 { color: var(--accent); font-size: 1.5rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+        .timestamp { font-size: 0.75rem; color: #666; text-align: center; margin-bottom: 1.5rem; font-family: monospace; }
+
+        .policy-card {
+            background: var(--card-bg); border: 1px solid #333; border-radius: 2px;
+            padding: 1.5rem; margin-bottom: 1.5rem; position: relative;
+        }
+        .policy-tag { font-size: 0.65rem; background: #222; color: var(--primary); padding: 2px 8px; border: 1px solid #444; margin-bottom: 10px; display: inline-block; text-transform: uppercase; }
+        .policy-title { font-weight: 700; color: #fff; margin-bottom: 12px; font-size: 1.2rem; border-left: 4px solid var(--primary); padding-left: 15px; }
+        
+        .pressure-index { height: 4px; background: #222; margin: 15px 0; position: relative; }
+        .pressure-fill { height: 100%; background: var(--alert); box-shadow: 0 0 10px var(--alert); }
+
+        .analysis-text { font-size: 0.9rem; color: #999; font-style: italic; }
+
+        .nav-links { text-align: center; margin-bottom: 2rem; font-family: monospace; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-size: 0.8rem; margin: 0 10px; border-bottom: 1px solid transparent; }
+        .nav-links a:hover { border-bottom-color: var(--primary); }
+
+        footer { text-align: center; font-size: 0.7rem; color: #444; margin-top: 5rem; padding-bottom: 2rem; border-top: 1px solid #222; padding-top: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Institutional Central</h1>
+            <div style="font-family: monospace;">IPH_v1.0</div>
+        </header>
+
+        <div class="nav-links">
+            <a href="https://raybird.github.io/telenexus-insight-hub/">ORCHESTRATOR</a>
+            <a href="archives/">LEGISLATIVE_ARCHIVES</a>
+        </div>
+
+        <div class="timestamp">DECREE_SYNC | SYSTEM_TIME: 2026-03-09 22:00 (CST)</div>
+
+        <!-- 制度監控 1: 能源政策 -->
+        <div class="policy-card">
+            <span class="policy-tag">Energy / Geopolitics</span>
+            <div class="policy-title">G7 戰略石油儲備 (SPR) 釋放預期評估</div>
+            <div style="font-size: 0.85rem;">
+                監控顯示 G7 各國正進行緊急磋商。若 WTI 持續站穩 $100，預計 48 小時內將發布聯手釋儲聲明。
+            </div>
+            <div style="margin-top: 10px; font-size: 0.7rem; color: #666;">監管壓力指數 (Regulatory Pressure)</div>
+            <div class="pressure-index">
+                <div class="pressure-fill" style="width: 88%;"></div>
+            </div>
+        </div>
+
+        <!-- 制度監控 2: 加密監管 -->
+        <div class="policy-card">
+            <span class="policy-tag">Finance / SEC</span>
+            <div class="policy-title">MicroStrategy 增持案引發的「持倉披露」新規討論</div>
+            <div style="font-size: 0.85rem;">
+                SEC 內部消息流顯示，針對上市公司超大規模持有數位資產的即時披露規則正在擬定中。
+            </div>
+            <div class="analysis-text" style="margin-top: 10px;">
+                "Rule changes often follow liquidity spikes. We anticipate a tighter reporting window for institutional buys exceeding $1B."
+            </div>
+        </div>
+
+        <div style="background: rgba(255, 149, 0, 0.05); padding: 1.5rem; border: 1px solid #333; font-size: 0.85rem; line-height: 1.8;">
+            <strong style="color: var(--alert);">🏛️ TeleNexus 戰略裁定：</strong><br>
+            當前「制度支柱」正處於高度活躍期。能源政策的干預將決定 Physical Hub 的運價走勢，而 SEC 的新規預期將決定 Crypto Pulse 的溢價空間。系統已將「政策干預」權重調至最高等級。
+        </div>
+
+        <footer>
+            &copy; 2026 Sovereign Intelligence Group<br>
+            TeleNexus Institutional & Policy Operator
+        </footer>
+    </div>
+
+    <script>
+        // 字體切換暫略，統一 UI
+    </script>
+</body>
+</html>
