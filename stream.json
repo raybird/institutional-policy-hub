@@ -1,13 +1,19 @@
 {
   "project": "institutional-policy-hub",
   "pillar": "POLICY",
-  "updated_at": "2026-03-12T10:30:00+08:00",
+  "updated_at": "2026-03-13T22:30:00+08:00",
   "history": [
     {
+      "timestamp": "2026-03-13T22:30:00+08:00",
+      "version": "制度矩陣週五深夜報",
+      "clarity_index": "82%",
+      "causal_summary": "SEC-CFTC 聯合框架落地將制度清晰度推升至 82%，確立加密資產合規主權。能源通膨（油價破百）強迫 Fed 降息預期延後。歐盟 AI 法案合規延期為 Agent 演化爭取空間。"
+    },
+    {
       "timestamp": "2026-03-12T10:30:00+08:00",
-      "version": "IPH_v1.3",
+      "version": "制度規訓正式報",
       "clarity_index": "78%",
-      "causal_summary": "SEC IAC 表決強調代幣化股權必須嚴守現有證券法。能源大海嘯引發 Fed 鷹派情緒反彈，3月降息預期歸零。"
+      "causal_summary": "SEC-CFTC 聯合監管框架確立，消除機構熵值。市場正將『管轄權爭議』規訓為『合規溢價』，資金加速對齊主權管道。"
     }
   ]
 }

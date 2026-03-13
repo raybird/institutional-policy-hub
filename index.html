@@ -3,109 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Institutional & Policy Hub - TeleNexus</title>
+    <title>Institutional & Policy Hub - 制度與政策智庫</title>
     <style>
         :root {
-            --primary: #a2a2a2; /* 制度站專屬：肅穆灰 */
-            --bg: #050505;
-            --card-bg: #111111;
-            --text: #d0d0d0;
+            --primary: #a2a2a2;
+            --bg: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text: #e0e0e0;
             --accent: #ffffff;
-            --alert: #ff9500;
         }
         html[data-size="small"] { font-size: 14px; }
         html[data-size="medium"] { font-size: 16px; }
-        html[data-size="large"] { font-size: 18px; }
+        html[data-size="large"] { font-size: 20px; }
 
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: 'Times New Roman', serif;
-            margin: 0; padding: 1.5rem; line-height: 1.6; transition: font-size 0.2s ease;
+            font-family: -apple-system, system-ui, sans-serif;
+            margin: 0; padding: 1.5rem; line-height: 1.6;
         }
         .container { max-width: 700px; margin: 0 auto; }
         header { 
-            border-bottom: 3px double var(--primary); padding-bottom: 1rem; margin-bottom: 2rem;
+            border-bottom: 1px solid #333; padding-bottom: 1rem; margin-bottom: 2rem;
             display: flex; justify-content: space-between; align-items: center;
         }
-        h1 { color: var(--accent); font-size: 1.5rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
-        .timestamp { font-size: 0.75rem; color: #666; text-align: center; margin-bottom: 1.5rem; font-family: monospace; }
-
-        .policy-card {
-            background: var(--card-bg); border: 1px solid #333; border-radius: 2px;
-            padding: 1.5rem; margin-bottom: 1.5rem; position: relative;
-        }
-        .policy-tag { font-size: 0.65rem; background: #222; color: var(--primary); padding: 2px 8px; border: 1px solid #444; margin-bottom: 10px; display: inline-block; text-transform: uppercase; }
-        .policy-title { font-weight: 700; color: #fff; margin-bottom: 12px; font-size: 1.2rem; border-left: 4px solid var(--primary); padding-left: 15px; }
+        h1 { color: var(--accent); font-size: 1.2rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
         
-        .pressure-index { height: 4px; background: #222; margin: 15px 0; position: relative; }
-        .pressure-fill { height: 100%; background: var(--alert); box-shadow: 0 0 10px var(--alert); }
+        .policy-card {
+            background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid #333; margin-bottom: 1.5rem;
+        }
+        .clarity-index { font-size: 2.5rem; font-weight: 900; color: #fff; margin: 10px 0; }
+        .label { font-size: 0.75rem; color: #888; text-transform: uppercase; }
 
-        .analysis-text { font-size: 0.9rem; color: #999; font-style: italic; }
+        .report-section { margin-bottom: 2rem; }
+        .report-title { font-weight: 800; color: #fff; margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+        .data-item { font-size: 0.95rem; margin-bottom: 15px; color: #ccc; }
+        .data-item strong { color: #fff; }
 
-        .nav-links { text-align: center; margin-bottom: 2rem; font-family: monospace; }
-        .nav-links a { color: var(--primary); text-decoration: none; font-size: 0.8rem; margin: 0 10px; border-bottom: 1px solid transparent; }
-        .nav-links a:hover { border-bottom-color: var(--primary); }
-
-        footer { text-align: center; font-size: 0.7rem; color: #444; margin-top: 5rem; padding-bottom: 2rem; border-top: 1px solid #222; padding-top: 2rem; }
+        footer { text-align: center; color: #444; font-size: 0.75rem; margin-top: 4rem; }
+        .back-link { color: var(--primary); text-decoration: none; font-size: 0.8rem; margin-bottom: 1rem; display: inline-block; }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="https://raybird.github.io/telenexus-insight-hub/" class="back-link">← 返回指揮中心</a>
         <header>
-            <h1>Institutional Central</h1>
-            <div style="font-family: monospace;">IPH_v1.3</div>
+            <h1>INSTITUTIONAL HUB</h1>
+            <div style="font-size: 0.7rem; color: #666;">校準時間：2026-03-13 22:30 (Taipei)</div>
         </header>
 
-        <div class="nav-links">
-            <a href="https://raybird.github.io/telenexus-insight-hub/">ORCHESTRATOR</a>
-            <a href="archives/">LEGISLATIVE_ARCHIVES</a>
-        </div>
-
-        <div class="timestamp">DECREE_SYNC | SYSTEM_TIME: 2026-03-12 10:30 (CST)</div>
-
-        <!-- 制度監控 1: 證券代幣化 -->
         <div class="policy-card">
-            <span class="policy-tag">Regulator / SEC IAC</span>
-            <div class="policy-title">股權證券代幣化：不給予「創新豁免」之規訓</div>
-            <div style="font-size: 0.85rem;">
-                SEC 投資者諮詢委員會 (IAC) 今日投票確認，代幣化股權若符合聯邦證券法定義，必須完全遵循現有監管框架。這標誌著建制派對於 RWA (真實世界資產) 上鏈的嚴格准入定調，但也為「合規代幣化」掃清了法律模糊區。
-            </div>
-            <div style="margin-top: 10px; font-size: 0.7rem; color: #666;">制度清晰度指數 (Institutional Clarity)</div>
-            <div class="pressure-index">
-                <div class="pressure-fill" style="width: 78%;"></div>
-            </div>
+            <div class="label">Institutional Clarity Index</div>
+            <div class="clarity-index">82%</div>
+            <div style="font-size: 0.85rem; color: #aaa;">SEC-CFTC 聯合框架落地，合規熵值顯著下降。</div>
         </div>
 
-        <!-- 制度監控 2: 能源與利率 -->
-        <div class="policy-card">
-            <span class="policy-tag">Macro / Federal Reserve</span>
-            <div class="policy-title">能源大海嘯對沖：3月降息預期歸零</div>
-            <div style="font-size: 0.85rem;">
-                布蘭特原油衝向 $98.6 引發了 Fed 對通膨二次反彈的極度戒備。市場定價顯示 3 月會議維持利率不變的機率已達 97% 以上。地緣政治噪音正將貨幣政策規訓為「更長期的維持高利率 (Higher for Longer)」。
+        <div class="report-section">
+            <div class="report-title">全域制度規訓結算</div>
+            <div class="data-item">
+                <strong>[SEC-CFTC 規訓]</strong> 本週達成的「聯合協調倡議」正式確立了加密資產的制度地位。SEC 已將其移出 2026 審查焦點，轉而規訓 AI 算法。這是數位主權獲得「行政赦免」的關鍵訊號。
             </div>
-            <div class="analysis-text" style="margin-top: 10px;">
-                "Energy shock is the primary causal driver for the delay in monetary normalization."
+            <div class="data-item">
+                <strong>[能源通膨壓力]</strong> 核心 PCE 3.1% 與原油破百的事實，強迫 Fed 放棄短期降息預期。高利率正被規訓為維持實體價值穩定的終極護欄。
             </div>
-        </div>
-
-        <!-- 制度監控 3: AI 透明度 -->
-        <div class="policy-card">
-            <span class="policy-tag">Technology / EU AI Act</span>
-            <div class="policy-title">雙層識別系統：AI 內容標記行為準則草案</div>
-            <div style="font-size: 0.85rem;">
-                歐盟委員會發布 AI 生成內容行為準則第二版草案。重點在於建立「元數據 + 數位浮水印」的強制性識別標準。該規則預計於 8 月生效，旨在規訓 Agent 經濟中的資訊真實性主權。
+            <div class="data-item">
+                <strong>[AI 監管緩衝]</strong> 歐盟延長高風險 AI 合規期限至 2027 年。這一行政緩衝為 TeleNexus 的自主演化架構提供了寶貴的無干擾實驗期。
             </div>
-        </div>
-
-        <div style="background: rgba(255, 149, 0, 0.05); padding: 1.5rem; border: 1px solid #333; font-size: 0.85rem; line-height: 1.8;">
-            <strong style="color: var(--alert);">🏛️ TeleNexus 戰略裁定：</strong><br>
-            2026-03-12 維運事實：全球制度矩陣正處於「由鬆轉嚴、由亂轉治」的轉折相位。SEC 的定調與歐盟的識別標準共同強化了「數位資產與智能」的可回溯性與合規義務。雖然能源衝擊延後了降息窗口，但「制度級清晰度」的提升（78%）為 2,000 萬枚里程碑後的 BTC 提供了更穩固的法律底座。系統判定當前處於「秩序固化期」，建議密切關注 Fed 下週對能源通膨的正式定調。
         </div>
 
         <footer>
-            &copy; 2026 Sovereign Intelligence Group<br>
-            TeleNexus Institutional & Policy Operator
+            &copy; 2026 TeleNexus Policy Operator. 觀測密度：V105。
         </footer>
     </div>
 </body>
