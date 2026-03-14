@@ -1,19 +1,19 @@
 {
   "project": "institutional-policy-hub",
   "pillar": "POLICY",
-  "updated_at": "2026-03-13T22:30:00+08:00",
+  "updated_at": "2026-03-14T10:30:00+08:00",
   "history": [
+    {
+      "timestamp": "2026-03-14T10:30:00+08:00",
+      "version": "週末制度規訓報",
+      "clarity_index": "85%",
+      "causal_summary": "SEC 認可穩定幣為支付骨幹（2% 折價規則）及 OCC GENIUS 法案落地，將制度清晰度推升至 85%。能源通膨固化強迫 Fed 降息預期延至 2027 年。歐盟 AI 法案延期為自主 Agent 演化提供行政緩衝。"
+    },
     {
       "timestamp": "2026-03-13T22:30:00+08:00",
       "version": "制度矩陣週五深夜報",
       "clarity_index": "82%",
-      "causal_summary": "SEC-CFTC 聯合框架落地將制度清晰度推升至 82%，確立加密資產合規主權。能源通膨（油價破百）強迫 Fed 降息預期延後。歐盟 AI 法案合規延期為 Agent 演化爭取空間。"
-    },
-    {
-      "timestamp": "2026-03-12T10:30:00+08:00",
-      "version": "制度規訓正式報",
-      "clarity_index": "78%",
-      "causal_summary": "SEC-CFTC 聯合監管框架確立，消除機構熵值。市場正將『管轄權爭議』規訓為『合規溢價』，資金加速對齊主權管道。"
+      "causal_summary": "SEC-CFTC 聯合框架落地將制度清晰度推升至 82%，確立加密資產合規主權。能源通膨（油價破百）強迫 Fed 降息預期延後。歐盟 AI 法案合規延期至 2027 年為 Agent 演化爭取空間。"
     }
   ]
 }
