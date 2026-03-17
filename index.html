@@ -1,82 +1,72 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-size="medium">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Institutional & Policy Hub - 制度與政策智庫</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Policy Hub - 全球制度監測中心</title>
     <style>
         :root {
-            --primary: #a2a2a2;
-            --bg: #0d0d0d;
-            --card-bg: #1a1a1a;
-            --text: #e0e0e0;
-            --accent: #ffffff;
+            --primary: #007aff;
+            --bg: #f5f5f7;
+            --card-bg: #ffffff;
+            --text: #1d1d1f;
+            --accent: #ff3b30;
         }
-        html[data-size="small"] { font-size: 14px; }
-        html[data-size="medium"] { font-size: 16px; }
-        html[data-size="large"] { font-size: 18px; }
-
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: -apple-system, system-ui, sans-serif;
-            margin: 0; padding: 1.5rem; line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; padding: 2rem; line-height: 1.5;
         }
-        .container { max-width: 700px; margin: 0 auto; }
-        header { 
-            border-bottom: 1px solid #333; padding-bottom: 1rem; margin-bottom: 2rem;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        h1 { color: var(--accent); font-size: 1.2rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .policy-card {
-            background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid #333; margin-bottom: 1.5rem;
-        }
-        .clarity-index { font-size: 2.5rem; font-weight: 900; color: #fff; margin: 10px 0; }
-        .label { font-size: 0.75rem; color: #888; text-transform: uppercase; }
-
-        .report-section { margin-bottom: 2rem; }
-        .report-title { font-weight: 800; color: #fff; margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 12px; }
-        .data-item { font-size: 0.95rem; margin-bottom: 15px; color: #ccc; }
-        .data-item strong { color: #fff; }
-
-        footer { text-align: center; color: #444; font-size: 0.75rem; margin-top: 4rem; }
-        .back-link { color: var(--primary); text-decoration: none; font-size: 0.8rem; margin-bottom: 1rem; display: inline-block; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 1px solid #d2d2d7; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: baseline; }
+        h1 { font-size: 1.5rem; font-weight: 600; margin: 0; }
+        .version { font-size: 0.8rem; color: #86868b; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .card p { font-size: 0.9rem; color: #48484a; }
+        .status-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-top: 10px; }
+        .status-critical { background: #ffe7e7; color: #ff3b30; }
+        .status-neutral { background: #e5e5ea; color: #3a3a3c; }
+        .analysis-box { background: #000; color: #fff; padding: 1.5rem; border-radius: 12px; margin-top: 2rem; font-size: 0.9rem; }
+        .analysis-box h4 { margin-top: 0; color: #007aff; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="https://raybird.github.io/telenexus-insight-hub/" class="back-link">← 返回指揮中心</a>
         <header>
             <h1>INSTITUTIONAL HUB</h1>
-            <div style="font-size: 0.7rem; color: #666;">校準時間：2026-03-16 10:30 (Taipei)</div>
+            <div class="version">2026-03-17 10:00 (CST) | v26.0317.1000</div>
         </header>
 
-        <div class="policy-card">
-            <div class="label">Institutional Clarity Index</div>
-            <div class="clarity-index">92%</div>
-            <div style="font-size: 0.85rem; color: #aaa;">美伊戰爭引發能源主權重組，SEC 外國內部人申報新規正式啟動。</div>
+        <div class="grid">
+            <div class="card">
+                <h3>SEC & Digital Assets</h3>
+                <p>SEC 與 CFTC 簽署 MOU，推進「窄幅創新豁免」。RWA 代幣化進入合規觀察期。</p>
+                <span class="status-tag status-neutral">POLICY: COMPLIANCE_FLOOR</span>
+            </div>
+            <div class="card">
+                <h3>Fed & Global Liquidity</h3>
+                <p>FOMC 維持利率 3.50%-3.75%。能源危機引發通膨預期抬升，面臨「硬收縮」風險。</p>
+                <span class="status-tag status-critical">MACRO: ENERGY_INFLATION</span>
+            </div>
+            <div class="card">
+                <h3>EU AI Act</h3>
+                <p>高風險 AI 合規期限延至 2027。2026/08 強制實施內容標記規則。</p>
+                <span class="status-tag status-neutral">TECH: TRANSPARENCY_RULE</span>
+            </div>
+            <div class="card">
+                <h3>Geopolitics: Hormuz</h3>
+                <p>「午夜鐵錘行動」導致荷姆茲海峽實質關閉。布蘭特原油突破 $100。</p>
+                <span class="status-tag status-critical">GEOPOL: SYSTEMIC_RISK</span>
+            </div>
         </div>
 
-        <div class="report-section">
-            <div class="report-title">週一開盤制度因果結算：戰時規範與監管穿透</div>
-            <div class="data-item">
-                <strong>[地緣戰爭與能源重整]</strong> 美軍空襲伊朗哈爾克島，荷姆茲海峽實質癱瘓。布蘭特原油飆升至 <strong>$105</strong>。IEA 協調釋放 4 億桶戰略儲備以對沖「戰爭溢價」，這標誌著全球流動性已進入針對極端能源波動的「實質補償階段」。
-            </div>
-            <div class="data-item">
-                <strong>[SEC 監管穿透]</strong> SEC 正式啟動《外國內部人責任法》申報新規，外國發行人高管須全面披露持股。疊加 SEC-CFTC 的 MOU 合流，數位資產的「合規基本盤」正在戰時混亂中展現出超越傳統金融的制度穩定性。
-            </div>
-            <div class="data-item">
-                <strong>[Fed 戰時防線]</strong> 本週利率決策會議預期利率維持在 <strong>3.50%–3.75%</strong>。紐約聯準會啟動 <strong>FedTrade Plus</strong> 拍賣平台，旨在透過更高效的技術手段在戰時高通膨環境下精密管控全球流動性。
-            </div>
-            <div class="data-item">
-                <strong>[ASIC 對 AI 代理的警告]</strong> 澳洲 ASIC 警告 Gen Z 過度依賴 AI 獲取財務建議。這揭示了 AI 代理在「實體化建議」領域面臨的信譽評估壓力，系統判定「透明度」與「可證偽性」已成為 Agent 演進的核心邊界。
-            </div>
+        <div class="analysis-box">
+            <h4>🧠 制度因果壓力分析 (Causal Pressure)</h4>
+            <p>當前全球制度面正處於<strong>「物理成本規訓貨幣政策」</strong>的極限相位。荷姆茲海峽的關閉不僅是地緣衝突，更是全球流動性的物理過濾器。當能源成本硬化後，Fed 的降息空間已被徹底鎖死，這將導致數位資產從「敘事驅動」轉向「韌性驅動」。同時，歐盟 AI 法案的緩衝期給予了開發者調整空間，但 8 月的內容標記規則將成為 AI 代理商業化的第一道硬性邊界。因果地板已穩固，彈道精確。</p>
         </div>
-
-        <footer>
-            &copy; 2026 TeleNexus Policy Operator. 觀測密度：6.24 (QUANTITATIVE)。
-        </footer>
     </div>
 </body>
 </html>
