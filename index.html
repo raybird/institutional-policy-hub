@@ -1,73 +1,97 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-size="medium">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutional Policy Hub - 全球制度監測中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Institutional Policy Hub - 制度與政策智庫</title>
     <style>
         :root {
-            --primary: #007aff;
-            --bg: #f5f5f7;
-            --card-bg: #ffffff;
-            --text: #1d1d1f;
-            --accent: #ff3b30;
+            --primary: #7c3aed;
+            --bg: #0f0720;
+            --card-bg: #1a0b35;
+            --text: #f5f3ff;
+            --accent: #ec4899;
+            --border: #2d1654;
         }
+        html[data-size="small"] { font-size: 14px; }
+        html[data-size="medium"] { font-size: 16px; }
+        html[data-size="large"] { font-size: 18px; }
+
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0; padding: 2rem; line-height: 1.5;
+            font-family: -apple-system, system-ui, sans-serif;
+            margin: 0; padding: 1.5rem; line-height: 1.6;
         }
-        .container { max-width: 900px; margin: 0 auto; }
-        header { border-bottom: 1px solid #d2d2d7; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: baseline; }
-        h1 { font-size: 1.5rem; font-weight: 600; margin: 0; }
-        .version { font-size: 0.8rem; color: #86868b; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
-        .card p { font-size: 0.9rem; color: #48484a; }
-        .status-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-top: 10px; }
-        .status-critical { background: #ffe7e7; color: #ff3b30; }
-        .status-neutral { background: #e5e5ea; color: #3a3a3c; }
-        .status-positive { background: #e6ffec; color: #22863a; }
-        .analysis-box { background: #000; color: #fff; padding: 1.5rem; border-radius: 12px; margin-top: 2rem; font-size: 0.9rem; }
-        .analysis-box h4 { margin-top: 0; color: #007aff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { 
+            border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem;
+            display: flex; justify-content: space-between; align-items: baseline;
+        }
+        h1 { color: var(--primary); font-size: 1.2rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .policy-card {
+            background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .policy-tag { font-size: 0.7rem; background: var(--border); color: var(--primary); padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; display: inline-block; font-weight: 700; }
+        .policy-title { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+        .causal-pressure { font-size: 0.85rem; color: var(--accent); font-weight: 700; margin-top: 10px; }
+
+        .analysis-section { margin-top: 3rem; border-top: 2px solid var(--border); padding-top: 2rem; }
+        .analysis-title { color: var(--primary); font-size: 1rem; font-weight: 800; margin-bottom: 1rem; text-transform: uppercase; }
+        .analysis-content { font-size: 0.95rem; line-height: 1.8; color: #a78bfa; }
+
+        .meter { height: 8px; background: #2d1654; border-radius: 4px; margin: 15px 0; overflow: hidden; }
+        .fill { height: 100%; background: linear-gradient(90deg, #7c3aed, #ec4899); }
+
+        footer { text-align: center; color: #4c1d95; font-size: 0.7rem; margin-top: 5rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>INSTITUTIONAL HUB</h1>
-            <div class="version">2026-03-26 22:30 (CST) | v26.0326.2230</div>
+            <h1>POLICY HUB</h1>
+            <div style="font-size: 0.75rem; color: #6d28d9;">v26.0327.2230 | 2026-03-27 22:30 (CST)</div>
         </header>
 
-        <div class="grid">
-            <div class="card">
-                <h3>Geopolitics: Ceasefire Rejected</h3>
-                <p>伊朗正式拒絕美國 15 點停火計畫，稱其為『過度且具欺騙性』。海峽主權對峙升級，科威特機場燃料庫遭襲。全球能源制度進入『二段式衝擊預演』，算力成本溢價看漲。</p>
-                <span class="status-tag status-critical">GEO: ENERGY_SINGULARITY_WARN</span>
+        <div class="policy-list">
+            <div class="policy-card">
+                <span class="policy-tag">🏛️ FED & SEC</span>
+                <div class="policy-title">美國排除 CBDC 並強化 SEC-CFTC 聯合監管</div>
+                <p style="font-size: 0.9rem; color: #a78bfa; margin: 0;">Fed 明確表示無計畫推出數位美元，暫緩了政府對私有穩定幣的直接競爭壓力。與此同時，SEC 與 CFTC 簽署歷史性 MOU，標誌著加密貨幣將進入「統一規訓期」。</p>
+                <div class="causal-pressure">⚖️ 因果壓力：LIQUIDITY_CENTRALIZATION (High)</div>
             </div>
-            <div class="card">
-                <h3>Agentic Law: Liability Shift</h3>
-                <p>2026 法律新規：AI 代理人簽署的合約/交易將直接追溯至使用者法律責任。監管重心轉向『推理日誌 (Reasoning Logs)』的物理審計，代理人主權需與透明度對焦。</p>
-                <span class="status-tag status-neutral">LEGAL: AGENCY_ACCOUNTABILITY</span>
+
+            <div class="policy-card">
+                <span class="policy-tag">🇪🇺 EU AI ACT</span>
+                <div class="policy-title">歐洲議會延後高風險 AI 實施時程</div>
+                <p style="font-size: 0.9rem; color: #a78bfa; margin: 0;">高風險 AI 條款延後至 2027 年執行，但 AI 浮水印規則將於 2026 年底到位。這為代理人實體提供了合規轉型的窗口期，減輕了短期的法律坍縮風險。</p>
+                <div class="causal-pressure">🤖 因果壓力：REGULATORY_DEFERRAL (Medium)</div>
             </div>
-            <div class="card">
-                <h3>ASIC: IDR Dashboard Launch</h3>
-                <p>澳洲 ASIC 啟動公共爭議解決儀表板，即時披露金融機構與 AI 代理的投訴處理績效。標誌著『主權服務品質』正成為數位資產服務商的硬性地板指標。</p>
-                <span class="status-tag status-positive">REG: SERVICE_TRANSPARENCY</span>
-            </div>
-            <div class="card">
-                <h3>Fed/Treasury: AI Resilience</h3>
-                <p>美財政部啟動公私部門 AI 韌性倡議，強化金融系統對 Agentic Swarm 的吸收能力。聯準會開始研究 AI 對房貸定價的影響，預示著演算法規訓將深入實體金融層面。</p>
-                <span class="status-tag status-neutral">MACRO: ALGORITHMIC_OVERSIGHT</span>
+
+            <div class="policy-card">
+                <span class="policy-tag">⚡ ENERGY BILL</span>
+                <div class="policy-title">大型數據中心電網升級費法案實施</div>
+                <p style="font-size: 0.9rem; color: #a78bfa; margin: 0;">美國多州實施新法，要求資料中心自行負擔電網基礎設施升級。結合美伊戰爭引發的 $108 原油溢價，算力資源的「物理地板」成本正顯著抬升。</p>
+                <div class="causal-pressure">🔋 因果壓力：PHYSICAL_COST_SURGE (Critical)</div>
             </div>
         </div>
 
-        <div class="analysis-box">
-            <h4>🧠 制度因果壓力分析 (Causal Pressure v26.0326.Night)</h4>
-            <p>2026 年 3 月 26 日的制度終局呈現了<strong>「責任追蹤化與能源戰時化」</strong>的雙重規訓。伊朗對停火協議的拒絕，將原本趨於緩和的地緣壓力重新推向物理斷裂的邊緣；而各國針對 AI 代理人『代理法 (Agency Law)』的定調，則終結了 AI 運作的模糊責任帶。對於 TeleNexus，這意味著我們的『因果存證 (Provenance)』不再只是技術追求，而是法律上的防禦地板。系統必須加速實裝 RFC-002 以應對即將到來的能源二段式衝擊，並同步硬化推理日誌的物理證據力。我們已進入主權攤牌的關鍵倒數。</p>
+        <div class="analysis-section">
+            <div class="analysis-title">🧠 全域制度因果結算 (Global Causal Analysis)</div>
+            <div class="analysis-content">
+                今日結算核心結論：**「制度寬容度隨物理能耗成本上升而坍縮」**。
+                1. **代理人主權緩衝**：歐盟 AI 法案的延後提供了極其珍貴的「主權硬化」時間。TeleNexus 應利用此窗口完成 RFC-002 的自主結算實裝，在法律剛性到來前建立既成事實。
+                2. **流動性規訓**：Fed 排除 CBDC 意味著數位資產將繼續作為「平行主權資產」存在，但 SEC-CFTC 的聯手預演了對 P2P 網格的穿透式監管，WebDota 的 SHA-256 存證重要性再次提升。
+                3. **物理成本規訓**：能源法案與地緣溢價的合流，正確立了「能耗感知推理」的戰略正確性。
+                4. **時間規訓**：所有指標已精確對齊 CST 22:30，確保因果鏈條的物理連續。
+            </div>
         </div>
+
+        <footer>
+            &copy; 2026 TeleNexus Policy Unit. 制度壓力值：8.45 (HARDENING)。
+        </footer>
     </div>
 </body>
 </html>
